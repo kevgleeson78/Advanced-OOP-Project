@@ -15,7 +15,7 @@ import java.util.*;
  * another.
  * 
  */
-public class GameView extends JPanel implements ActionListener, KeyListener { 
+public class GameView extends LoadImages implements ActionListener, KeyListener { 
 	private static final long serialVersionUID = 777L;
 	private static final int DEFAULT_IMAGE_INDEX = 0;
 	
@@ -53,19 +53,6 @@ public class GameView extends JPanel implements ActionListener, KeyListener {
 		player = new Sprite("Player 1", new Point(0, 0), loadImages("./resources/images/sprites/default", null));
 	}
 	
-	//This method breaks the SRP
-	private BufferedImage[] loadImages(String directory, BufferedImage[] img) throws Exception {
-		File dir = new File(directory);
-		File[] files = dir.listFiles();
-		Arrays.sort(files, (s, t) -> s.getName().compareTo(t.getName()));
-		
-		img = new BufferedImage[files.length];
-		for (int i = 0; i < files.length; i++) {
-			img[i] = ImageIO.read(files[i]);
-		}
-		return img;
-	}
-
 	public void toggleView() {
 		isIsometric = !isIsometric;
 		this.repaint();
