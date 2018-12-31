@@ -7,7 +7,7 @@ public class Runner {
 		//Never run a GUI in the same thread as the main method... This is asynchronous:
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() { //Template method....
-				try {
+				try { 
 					/* 
 					 * ----------------------------------------
 					 *             Control Keys
