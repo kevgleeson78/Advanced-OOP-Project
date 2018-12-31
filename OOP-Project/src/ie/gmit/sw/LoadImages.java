@@ -5,35 +5,26 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class LoadImages extends JPanel {
+public class LoadImages extends JPanel implements LoadImageable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
 	public LoadImages() {
 		super();
 	}
 
-	public LoadImages(LayoutManager layout) {
-		super(layout);
-	}
 
-	public LoadImages(boolean isDoubleBuffered) {
-		super(isDoubleBuffered);
-	}
 
-	public LoadImages(LayoutManager layout, boolean isDoubleBuffered) {
-		super(layout, isDoubleBuffered);
-	}
 
-	protected BufferedImage[] loadImages(String directory, BufferedImage[] img) throws Exception {
+	public BufferedImage[] loadImages(String directory, BufferedImage[] img) throws IOException {
 		File dir = new File(directory);
 		File[] files = dir.listFiles();
 		Arrays.sort(files, (s, t) -> s.getName().compareTo(t.getName()));
