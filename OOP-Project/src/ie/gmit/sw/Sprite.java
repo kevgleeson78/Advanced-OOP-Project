@@ -28,15 +28,15 @@ public class Sprite { //Sprite belongs in some sort of hierarchy....
 	public Sprite(String name, Point p, BufferedImage[] img) {
 		this(name, p);
 		int row = 0, col = 0;
-		for (int i = 0; i < img.length; i++) {
-			images[row][col] = img[i];
-			if (col == images[row].length - 1) {
-				row++;
-				col = 0;
-			}else {
-				col++;
-			}
-		}
+            for (BufferedImage img1 : img) {
+                images[row][col] = img1;
+                if (col == images[row].length - 1) {
+                    row++;
+                    col = 0;
+                }else {
+                    col++;
+                }
+            }
 	}
 	
 	public String getName() {

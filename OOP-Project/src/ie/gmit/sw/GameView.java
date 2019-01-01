@@ -36,7 +36,7 @@ public class GameView extends LoadImages implements ActionListener, KeyListener 
 	private Timer timer; //Controls the repaint interval.
 	private boolean isIsometric = true; //Toggle between 2D and Isometric (Z key)
 	
-	public GameView(int[][] matrix, int[][] things) throws Exception {
+	public GameView(int[][] matrix,int[][] things) throws Exception {
 		init();
 		this.matrix = matrix;
 		this.things = things;

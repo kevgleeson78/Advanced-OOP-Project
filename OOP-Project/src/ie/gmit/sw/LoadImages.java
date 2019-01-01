@@ -1,8 +1,6 @@
 package ie.gmit.sw;
 
-import java.awt.LayoutManager;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -21,9 +19,7 @@ public class LoadImages extends JPanel implements LoadImageable {
 		super();
 	}
 
-
-
-
+        @Override
 	public BufferedImage[] loadImages(String directory, BufferedImage[] img) throws IOException {
 		File dir = new File(directory);
 		File[] files = dir.listFiles();
