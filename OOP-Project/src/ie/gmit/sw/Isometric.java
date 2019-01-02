@@ -1,9 +1,6 @@
 package ie.gmit.sw;
 
-import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
-
-public class Isometric extends LoadImages {
+public class Isometric extends LoadImages implements Isometricator{
 
 	/**
 	 * 
@@ -17,16 +14,19 @@ public class Isometric extends LoadImages {
 		super();
 	}
 
-	protected int getIsoX(int x, int y) {
+ 
+	public int getIsoX(int x, int y) {
 		int rshift = (DEFAULT_VIEW_SIZE/2) - (TILE_WIDTH/2) + (x - y); //Pan camera to the right
 		return (x - y) * (TILE_WIDTH/2) + rshift;
 	}
 
-	protected int getIsoY(int x, int y) {
+     
+	public int getIsoY(int x, int y) {
 		return (x + y) * (TILE_HEIGHT/2);
 	}
 
-	protected Point getIso(int x, int y) {
+       
+	public Point getIso(int x, int y) {
 		return new Point(getIsoX(x, y), getIsoY(x, y)); //Could be more efficient...
 	}
 

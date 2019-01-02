@@ -2,12 +2,7 @@ package ie.gmit.sw;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.*;
-import javax.swing.*;
 import javax.swing.Timer;
-import javax.imageio.*;
-import java.io.*;
-import java.util.*;
 
 /*
  * This is a God class and is doing way too much. The instance variables cover everything from isometric to 
@@ -40,32 +35,43 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 		this.repaint();
 	}
 
+        @Override
 	public void actionPerformed(ActionEvent e) { //This is called each time the timer reaches zero
 		this.repaint();
 	}
 
 	
+        @Override
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-			player.setDirection(Direction.RIGHT);
-		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-			player.setDirection(Direction.LEFT);
-		} else if (e.getKeyCode() == KeyEvent.VK_UP) {
-			player.setDirection(Direction.UP);
-		} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			player.setDirection(Direction.DOWN);
-		} else if (e.getKeyCode() == KeyEvent.VK_Z) {
-			toggleView();
-		} else if (e.getKeyCode() == KeyEvent.VK_X) {
-			player.move();
-		} else {
-			return;
-		}
+            switch (e.getKeyCode()) {
+                case KeyEvent.VK_RIGHT:
+                    player.setDirection(Direction.RIGHT);
+                    break;
+                case KeyEvent.VK_LEFT:
+                    player.setDirection(Direction.LEFT);
+                    break;
+                case KeyEvent.VK_UP:
+                    player.setDirection(Direction.UP);
+                    break;
+                case KeyEvent.VK_DOWN:
+                    player.setDirection(Direction.DOWN);
+                    break;
+                case KeyEvent.VK_Z:
+                    toggleView();
+                    break;
+                case KeyEvent.VK_X:
+                    player.move();
+                    break;
+                default:
+                    break;
+            }
 	}
 	
+        @Override
 	public void keyReleased(KeyEvent e) {
 	} // Ignore
 	
+        @Override
 	public void keyTyped(KeyEvent e) {
 	} // Ignore
 }

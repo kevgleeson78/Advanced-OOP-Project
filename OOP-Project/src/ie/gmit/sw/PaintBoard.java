@@ -3,8 +3,6 @@ package ie.gmit.sw;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 public class PaintBoard extends Isometric {
