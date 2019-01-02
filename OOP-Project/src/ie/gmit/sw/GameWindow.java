@@ -36,7 +36,7 @@ public class GameWindow {
 	
 	public GameWindow() throws Exception {
 		GameView view = new GameView(model, objects);
-		Dimension d = new Dimension(GameView.DEFAULT_VIEW_SIZE, GameView.DEFAULT_VIEW_SIZE/2);
+		Dimension d = new Dimension(Isometric.DEFAULT_VIEW_SIZE, Isometric.DEFAULT_VIEW_SIZE/2);
 		view.setPreferredSize(d);
 		view.setMinimumSize(d);
 		view.setMaximumSize(d);
