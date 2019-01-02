@@ -24,7 +24,7 @@ public class GameView extends LoadImages implements ActionListener, KeyListener 
 	private static final int TILE_WIDTH = 128;
 	private static final int TILE_HEIGHT = 64;
 	private Sprite player;
-
+	//Create a matrixable interface and matrixableImpl to reuse the 2d matrix rather than having two separate variables.
 	//Do we really need two models like this?
 	private int[][] matrix;
 	private int[][] things;
@@ -62,6 +62,9 @@ public class GameView extends LoadImages implements ActionListener, KeyListener 
 		this.repaint();
 	}
 
+	
+	//Proxy pettern here
+	// And paint class with interface
 	public void paintComponent(Graphics g) { //This method needs to execute quickly...
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
@@ -106,7 +109,7 @@ public class GameView extends LoadImages implements ActionListener, KeyListener 
 		point = getIso(player.getPosition().getX(), player.getPosition().getY());
 		g2.drawImage(player.getImage(), point.getX(), point.getY(), null);
 	}
-	
+	// Put these into classes iso x and iso y and refactor 
 	//This method breaks the SRP
 	private int getIsoX(int x, int y) {
 		int rshift = (DEFAULT_VIEW_SIZE/2) - (TILE_WIDTH/2) + (x - y); //Pan camera to the right
@@ -119,6 +122,7 @@ public class GameView extends LoadImages implements ActionListener, KeyListener 
 	}
 	
 	//This method breaks the SRP
+	//Create a class for this method
 	private Point getIso(int x, int y) {
 		return new Point(getIsoX(x, y), getIsoY(x, y)); //Could be more efficient...
 	}
