@@ -12,13 +12,13 @@ public class PaintBoard extends Isometric {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_IMAGE_INDEX = 0;
-	protected Sprite player;
-	protected int[][] matrix;
-	protected int[][] things;
-	protected BufferedImage[] tiles;
-	protected BufferedImage[] objects;
+	private Sprite player;
+	private int[][] matrix;
+	private int[][] things;
+	private BufferedImage[] tiles;
+	private BufferedImage[] objects;
 	private Color[] cartesian = {Color.GREEN, Color.GRAY, Color.DARK_GRAY, Color.ORANGE, Color.CYAN, Color.YELLOW, Color.PINK, Color.BLACK};
-	protected boolean isIsometric = true;
+	private boolean isIsometric = true;
 
 	public PaintBoard() {
 		super();
@@ -30,43 +30,91 @@ public class PaintBoard extends Isometric {
 		int imageIndex = -1, x1 = 0, y1 = 0;
 		Point point;
 		
-		for (int row = 0; row < matrix.length; row++) {
-			for (int col = 0; col < matrix[row].length; col++) {
-				imageIndex = matrix[row][col];
+		for (int row = 0; row < getMatrix().length; row++) {
+			for (int col = 0; col < getMatrix()[row].length; col++) {
+				imageIndex = getMatrix()[row][col];
 				
-				if (imageIndex >= 0 && imageIndex < tiles.length) {
+				if (imageIndex >= 0 && imageIndex < getTiles().length) {
 					//Paint the ground tiles
-					if (isIsometric) {
+					if (isIsometric()) {
 						x1 = getIsoX(col, row);
 						y1 = getIsoY(col, row);
 						
-						g2.drawImage(tiles[DEFAULT_IMAGE_INDEX], x1, y1, null);
+						g2.drawImage(getTiles()[DEFAULT_IMAGE_INDEX], x1, y1, null);
 						if (imageIndex > DEFAULT_IMAGE_INDEX) {
-							g2.drawImage(tiles[imageIndex], x1, y1, null);
+							g2.drawImage(getTiles()[imageIndex], x1, y1, null);
 						}
 					} else {
-						x1 = col * TILE_WIDTH;
-						y1 = row * TILE_HEIGHT;
+						x1 = col * getTileWidth();
+						y1 = row * getTileHeight();
 	        			if (imageIndex < cartesian.length) {
 	        				g2.setColor(cartesian[imageIndex]);
 	        			}else {
 	        				g2.setColor(Color.WHITE);
 	        			}
 						
-	        			g2.fillRect(x1, y1, TILE_WIDTH, TILE_WIDTH);
+	        			g2.fillRect(x1, y1, getTileWidth(), getTileWidth());
 					}
 					//Paint the object or things on the ground
 					
 					
-					imageIndex = things[row][col];
-					g2.drawImage(objects[imageIndex], x1, y1, null);
+					imageIndex = getThings()[row][col];
+					g2.drawImage(getObjects()[imageIndex], x1, y1, null);
 				}
 			}
 		}
 		
 		//Paint the player on  the ground
-		point = getIso(player.getPosition().getX(), player.getPosition().getY());
-		g2.drawImage(player.getImage(), point.getX(), point.getY(), null);
+		point = getIso(getPlayer().getPosition().getX(), getPlayer().getPosition().getY());
+		g2.drawImage(getPlayer().getImage(), point.getX(), point.getY(), null);
+	}
+
+	public int[][] getMatrix() {
+		return matrix;
+	}
+
+	public void setMatrix(int[][] matrix) {
+		this.matrix = matrix;
+	}
+
+	public int[][] getThings() {
+		return things;
+	}
+
+	public void setThings(int[][] things) {
+		this.things = things;
+	}
+
+	public BufferedImage[] getTiles() {
+		return tiles;
+	}
+
+	public void setTiles(BufferedImage[] tiles) {
+		this.tiles = tiles;
+	}
+
+	public BufferedImage[] getObjects() {
+		return objects;
+	}
+
+	public void setObjects(BufferedImage[] objects) {
+		this.objects = objects;
+	}
+
+	public Sprite getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Sprite player) {
+		this.player = player;
+	}
+
+	public boolean isIsometric() {
+		return isIsometric;
+	}
+
+	public void setIsometric(boolean isIsometric) {
+		this.isIsometric = isIsometric;
 	}
 
 }

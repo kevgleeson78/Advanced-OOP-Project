@@ -10,13 +10,13 @@ import javax.swing.Timer;
  * another.
  * 
  */
-public class GameView extends PaintBoard implements ActionListener, KeyListener { 
+public class GameView extends PaintBoard implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 777L;
 	private Timer timer; //Controls the repaint interval.
 	public GameView(int[][] matrix,int[][] things) throws Exception {
 		init();
-		this.matrix = matrix;
-		this.things = things;
+		this.setMatrix(matrix);
+		this.setThings(things);
 		
 		setBackground(Color.WHITE);
 		setDoubleBuffered(true); //Each image is buffered twice to avoid tearing / stutter
@@ -25,13 +25,13 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 	}
 	
 	private void init() throws Exception {
-		tiles = loadImages("./resources/images/ground", tiles);
-		objects = loadImages("./resources/images/objects", objects);
-		player = new Sprite("Player 1", new Point(0, 0), loadImages("./resources/images/sprites/default", null));
+		setTiles(loadImages("./resources/images/ground", getTiles()));
+		setObjects(loadImages("./resources/images/objects", getObjects()));
+		setPlayer(new Sprite("Player 1", new Point(0, 0), loadImages("./resources/images/sprites/default", null)));
 	}
 	
 	public void toggleView() {
-		isIsometric = !isIsometric;
+		setIsometric(!isIsometric());
 		this.repaint();
 	}
 
@@ -45,22 +45,22 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 	public void keyPressed(KeyEvent e) {
             switch (e.getKeyCode()) {
                 case KeyEvent.VK_RIGHT:
-                    player.setDirection(Direction.RIGHT);
+                    getPlayer().setDirection(Direction.RIGHT);
                     break;
                 case KeyEvent.VK_LEFT:
-                    player.setDirection(Direction.LEFT);
+                    getPlayer().setDirection(Direction.LEFT);
                     break;
                 case KeyEvent.VK_UP:
-                    player.setDirection(Direction.UP);
+                    getPlayer().setDirection(Direction.UP);
                     break;
                 case KeyEvent.VK_DOWN:
-                    player.setDirection(Direction.DOWN);
+                    getPlayer().setDirection(Direction.DOWN);
                     break;
                 case KeyEvent.VK_Z:
                     toggleView();
                     break;
                 case KeyEvent.VK_X:
-                    player.move();
+                    getPlayer().move();
                     break;
                 default:
                     break;
