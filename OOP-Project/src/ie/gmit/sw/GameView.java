@@ -13,6 +13,8 @@ import javax.swing.Timer;
 public class GameView extends PaintBoard implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 777L;
 	private Timer timer; //Controls the repaint interval.
+	
+	
 	public GameView(int[][] matrix,int[][] things) throws Exception {
 		init();
 		this.setMatrix(matrix);
