@@ -19,14 +19,11 @@ public class Sprite { //Sprite belongs in some sort of hierarchy....
 	private int index = 0; //The current image index.
 	private Point position; //The current x, y position
 
-	public Sprite(String name, Point p) {
-		super();
-		this.name = name;
-		this.position = p;
-	}
+	
 	
 	public Sprite(String name, Point p, BufferedImage[] img) {
-		this(name, p);
+		this.name = name;
+        this.position =  p;
 		int row = 0, col = 0;
             for (BufferedImage img1 : img) {
                 images[row][col] = img1;
