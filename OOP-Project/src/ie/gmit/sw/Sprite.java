@@ -13,13 +13,13 @@ package ie.gmit.sw;
 
 import java.awt.image.*;
 /**
- * <h1>Title here</h1> 
+ * <h1>Sprite</h1> 
  * @author Kevin Gleeson
  * @version 1.0
  * @since 2018-20-12
  */
-public class Sprite { //Sprite belongs in some sort of hierarchy....
-	private String name; //The name of the sprite
+public class Sprite { 
+	private String name; 
 	private BufferedImage[][] images = new BufferedImage[4][3]; //The images used in the animation
 	private Direction direction = Direction.DOWN; //The current orientation of the sprite
 	private int index = 0; //The current image index.

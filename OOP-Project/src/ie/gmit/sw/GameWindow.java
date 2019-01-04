@@ -17,7 +17,7 @@ public class GameWindow{
 	/**
 	 * A new instance of the Matrix class.
 	 */
-	Matrix m = new Matrix();
+	private Matrix m = new Matrix();
 	   /**
 	    * A private instance of this class.
 	    */
