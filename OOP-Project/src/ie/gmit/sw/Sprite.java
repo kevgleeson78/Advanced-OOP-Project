@@ -67,7 +67,7 @@ public class Sprite { //Sprite belongs in some sort of hierarchy....
         return this.direction;
     }
 
-	public void move() { //This method is suspiciously like one I've seen already....
+	public void move() { 
 		step(direction);
 
 		switch(direction.getOrientation()) {

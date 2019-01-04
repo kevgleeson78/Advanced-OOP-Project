@@ -29,7 +29,8 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 	private void init() throws Exception {
 		setTiles(loadImages("./resources/images/ground", getTiles()));
 		setObjects(loadImages("./resources/images/objects", getObjects()));
-		setPlayer(new Sprite("Player 1", new Point(0, 0), loadImages("./resources/images/sprites/default", null)));
+                //A builder pattern for the sprite class.
+		setPlayer(new SpriteBuilder().setName("Player 1").setP(new Point(0, 0)).setImg(loadImages("./resources/images/sprites/default", null)).createSprite());
 	}
 	
 	public void toggleView() {
