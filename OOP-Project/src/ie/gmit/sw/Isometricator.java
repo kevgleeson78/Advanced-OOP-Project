@@ -6,13 +6,42 @@
 package ie.gmit.sw;
 
 /**
- * <h1>Title here</h1> 
+ * <h1>Isometricator</h1> An interface to supply the methods getIsoX, getIsoY,
+ * getIso to an implementing class.
+ * 
  * @author Kevin Gleeson
  * @version 1.0
  * @since 2018-20-12
  */
 public interface Isometricator {
-   public int getIsoX(int x, int y);
-   public int getIsoY(int x, int y);
-   public Point getIso(int x, int y);
+	/**
+	 * 
+	 * @param x
+	 * x in 2D space
+	 * @param y
+	 * y in 2d space
+	 * @return
+	 * Converted isometric x coordinate.
+	 */
+	public int getIsoX(int x, int y);
+	/**
+	 * 
+	 * @param x
+	 * x in 2D space
+	 * @param y
+	 * y in 2d space
+	 * @return
+	 * Converted isometric y coordinate.
+	 */
+	public int getIsoY(int x, int y);
+	/**
+	 * 
+	 * @param x
+	 * Gets isoX
+	 * @param y
+	 * Gets isoY
+	 * @return
+	 * Converts the character position from cartesian to isometric.
+	 */
+	public Point getIso(int x, int y);
 }

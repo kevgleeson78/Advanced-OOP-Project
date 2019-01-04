@@ -63,9 +63,9 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 		setObjects(loadImages("./resources/images/objects", getObjects()));
 		/**
 		 * A builder pattern used to build an instance of a new sprite.
-		 * THis can be used to create different versions of the same object.
+		 * This can be used to create different versions of the same object.
 		 * ie A Player, enemy or goal object needed to complete a mission.
-		 * Each new object can be named via a simple string declaration.
+		 * Each new object can be named via a simple string declaration with the Point on the game board.
 		 */
 		setPlayer(new SpriteBuilder().setName("Player 1").setP(new Point(0, 0))
 				.setImg(loadImages("./resources/images/sprites/default", null)).createSprite());

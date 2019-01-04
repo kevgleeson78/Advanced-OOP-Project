@@ -1,12 +1,19 @@
 package ie.gmit.sw;
 /**
- * <h1>Title here</h1> 
+ * <h1>Matrix</h1>
+ * This class has two matrices of model and objects.
+ * The model matrix hold the tiles of the game view.
+ * The objects matrix holds the game objects to be added to the game view.
+ * Getters and setters are added for both the model and objects matrices to be used with the GAmeWindow singleton.
  * @author Kevin Gleeson
  * @version 1.0
  * @since 2018-20-12
  */
 public class Matrix {
-
+	/**
+	 * For each 2D matrix the number represents an image name held in the resources directory.
+	 * The can be changed and swapped as needed.
+	 */
 	private int[][] model = { 
 				{ 1, 0, 0, 0, 0, 0 , 0, 0, 0, 2},
 				{ 0, 1, 0, 0, 0, 0 , 0, 0, 0, 2},
