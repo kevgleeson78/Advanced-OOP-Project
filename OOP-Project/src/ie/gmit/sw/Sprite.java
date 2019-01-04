@@ -107,11 +107,16 @@ public class Sprite {
      * The movement is restricted if the characters x, y position is outside if the current grid space.
      */
 	public void move() { 
+		/**
+		 * Encapsulated instance of Matrix class to get the max x,y movement of the character.
+		 * Instance called as is can grow if the matrices are made bigger or smaller without the need to change the code here in this method.
+		 */
+		Matrix m = new Matrix();
 		step(direction);
 
 		switch(direction.getOrientation()) {
 		case 1:
-			if(position.getY()<9) {
+			if(position.getY()< m.getModel().length-1) {
 			position.setY(position.getY() + 1); //UP
 			}
 			break;
@@ -121,7 +126,7 @@ public class Sprite {
 			}
 			break;
 		case 3:
-			if(position.getX()<9) {
+			if(position.getX()< m.getModel().length-1) {
 			position.setX(position.getX() + 1); //LEFT
 			}
 			break;
