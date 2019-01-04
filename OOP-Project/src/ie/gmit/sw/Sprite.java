@@ -14,11 +14,21 @@ package ie.gmit.sw;
 import java.awt.image.*;
 /**
  * <h1>Sprite</h1> 
+ * This class is responsible for holding the data for each sprite in the application.
+ * With: the name of the sprite,
+ * 		 the images for the sprite to be animated,
+ * 		 The direct the sprite is facing,
+ * 		 The index of the sprite image,
+ * 		 The current x, y position,
+ * 	 	 Moving the sprite.
+ * A builder design pattern is used with this class and the SpriteBuilder class
+ * to enable the building (reuse) of custom sprites with different names e.g player enemy goal objects.		 
  * @author Kevin Gleeson
  * @version 1.0
  * @since 2018-20-12
  */
 public class Sprite { 
+	
 	private String name; 
 	private BufferedImage[][] images = new BufferedImage[4][3]; //The images used in the animation
 	private Direction direction = Direction.DOWN; //The current orientation of the sprite
@@ -26,7 +36,15 @@ public class Sprite {
 	private Point position; //The current x, y position
 
 	
-	
+	/**
+	 * Constructor 
+	 * @param name
+	 * The name of the sprite
+	 * @param p
+	 * the x,y coordinate of the sprite
+	 * @param img
+	 * the buffered image of the sprite
+	 */
 	public Sprite(String name, Point p, BufferedImage[] img) {
 		this.name = name;
         this.position =  p;
@@ -49,11 +67,21 @@ public class Sprite {
 	public Point getPosition() {
 		return position;
 	}
-
+	/**
+	 * Method to get the image
+	 * @return
+	 * Returns the image with the animation index and orientation
+	 */
 	public BufferedImage getImage() {
 		return images[direction.getOrientation()][index];
 	}
-
+	/**
+	 * 
+	 * @param d
+	 * The direction character is facing from the Direction enum
+	 * @return
+	 * Returns the direction the sprite should be facing.
+	 */
 	public BufferedImage step(Direction d) {
 		setDirection(d);
 		if (index < images[direction.getOrientation()].length - 1) {
@@ -72,7 +100,9 @@ public class Sprite {
     public Direction getDirection() {
         return this.direction;
     }
-
+    /**
+     * Move method to to set and update the position of the character
+     */
 	public void move() { 
 		step(direction);
 

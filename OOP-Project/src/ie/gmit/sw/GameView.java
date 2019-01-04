@@ -62,7 +62,7 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 		setTiles(loadImages("./resources/images/ground", getTiles()));
 		setObjects(loadImages("./resources/images/objects", getObjects()));
 		/**
-		 * A builder pattern used to build an instance of a new sprite.
+		 * A builder pattern used from the SpriteBuilder class to build an instance of a new sprite.
 		 * This can be used to create different versions of the same object.
 		 * ie A Player, enemy or goal object needed to complete a mission.
 		 * Each new object can be named via a simple string declaration with the Point on the game board.
