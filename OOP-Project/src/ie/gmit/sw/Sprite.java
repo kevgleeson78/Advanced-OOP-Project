@@ -103,7 +103,8 @@ public class Sprite {
         return this.direction;
     }
     /**
-     * Move method to to set and update the position of the character
+     * Move method to to set and update the position of the character.
+     * The movement is restricted if the characters x, y position is outside if the current grid space.
      */
 	public void move() { 
 		step(direction);
