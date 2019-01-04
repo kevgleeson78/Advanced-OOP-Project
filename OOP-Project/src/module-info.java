@@ -5,6 +5,7 @@
  * @author Kevin
  *
  */
-module ie.gmit.sw {
+open module gmit.software {
 	requires java.desktop;
+	exports ie.gmit.sw;
 }
