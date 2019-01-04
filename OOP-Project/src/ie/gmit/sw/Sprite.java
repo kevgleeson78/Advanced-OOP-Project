@@ -49,6 +49,7 @@ public class Sprite {
 		this.name = name;
         this.position =  p;
 		int row = 0, col = 0;
+		
             for (BufferedImage img1 : img) {
                 images[row][col] = img1;
                 if (col == images[row].length - 1) {
@@ -58,6 +59,7 @@ public class Sprite {
                     col++;
                 }
             }
+		
 	}
 	
 	public String getName() {
@@ -108,16 +110,24 @@ public class Sprite {
 
 		switch(direction.getOrientation()) {
 		case 1:
+			if(position.getY()<9) {
 			position.setY(position.getY() + 1); //UP
+			}
 			break;
 		case 2:
+			if(position.getX()>0) {
 			position.setX(position.getX() - 1); //DOWN
+			}
 			break;
 		case 3:
+			if(position.getX()<9) {
 			position.setX(position.getX() + 1); //LEFT
+			}
 			break;
 		default:
+			if(position.getY()>0) {
 			position.setY(position.getY() - 1); //RIGHT
+			}
 			break;
 		}
 	}
