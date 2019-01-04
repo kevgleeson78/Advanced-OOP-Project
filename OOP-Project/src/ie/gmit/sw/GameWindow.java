@@ -42,7 +42,7 @@ public class GameWindow{
 			view.setMinimumSize(d);
 			view.setMaximumSize(d);
 			/**
-			 * A new jFrame with title layou screen position and visibility set.
+			 * A new jFrame with title layout screen position and visibility set.
 			 */
 			JFrame f = new JFrame("GMIT - B.Sc. in Computing (Software Development)");
 			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,8 +54,8 @@ public class GameWindow{
 			f.pack();
 			f.setVisible(true);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+                       // TODO Auto-generated catch block
+
 		}
 			
 	   }
@@ -63,6 +63,7 @@ public class GameWindow{
 	   /**
 	    * Returns a single instance of the game window in the main runner class.
 	    * @return
+            * GameWindow instance
 	    */
 	   public static GameWindow getInstance(){
 	      return instance;
