@@ -5,12 +5,13 @@
  */
 package ie.gmit.sw;
 
+import java.awt.image.BufferedImage;
 
 public class SpriteBuilder {
 
     private String name;
     private ie.gmit.sw.Point p;
-    private java.awt.image.BufferedImage[] img;
+    private BufferedImage[] img;
 
     public SpriteBuilder() {
     }
@@ -25,7 +26,7 @@ public class SpriteBuilder {
         return this;
     }
 
-    public SpriteBuilder setImg(java.awt.image.BufferedImage[] img) {
+    public SpriteBuilder setImg(BufferedImage[] img) {
         this.img = img;
         return this;
     }

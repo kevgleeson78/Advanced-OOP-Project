@@ -2,7 +2,7 @@ package ie.gmit.sw;
 
 public class Matrix {
 
-	protected int[][] model = { 
+	private int[][] model = { 
 				{ 1, 0, 0, 0, 0, 0 , 0, 0, 0, 2},
 				{ 0, 1, 0, 0, 0, 0 , 0, 0, 0, 2},
 				{ 0, 0, 2, 0, 0, 0 , 0, 0, 0, 2},
@@ -14,7 +14,7 @@ public class Matrix {
 				{ 4, 4, 4, 4, 5, 3 , 1, 6, 6, 6},
 				{ 4, 4, 4, 4, 4, 3 , 1, 7, 7, 7}
 		};
-	protected int[][] objects = { 
+	private int[][] objects = { 
 				{ 0, 0, 0, 5, 5, 5 , 5, 5, 5, 0},
 				{ 5, 0, 0, 0, 5, 5 , 5, 5, 5, 0},
 				{ 5, 5, 0, 0, 0, 5 , 5, 5, 5, 9},
