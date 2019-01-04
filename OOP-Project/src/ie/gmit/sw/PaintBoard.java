@@ -4,12 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-
+/**
+ * <h1>Title here</h1> 
+ * @author Kevin Gleeson
+ * @version 1.0
+ * @since 2018-20-12
+ */
 public class PaintBoard extends Isometric {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_IMAGE_INDEX = 0;
 	private Sprite player;

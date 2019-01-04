@@ -1,6 +1,12 @@
 package ie.gmit.sw;
 
 import java.awt.*;
+/**
+ * <h1>Title here</h1> 
+ * @author Kevin Gleeson
+ * @version 1.0
+ * @since 2018-20-12
+ */
 import javax.swing.*;
 public class GameWindow{
 	Matrix m = new Matrix();

@@ -3,7 +3,10 @@ package ie.gmit.sw;
 public class Isometric extends LoadImages implements Isometricator{
 
 	/**
-	 * 
+	 * <h1>Title here</h1> 
+	 * @author Kevin Gleeson
+	 * @version 1.0
+	 * @since 2018-20-12
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_VIEW_SIZE = 1280;
