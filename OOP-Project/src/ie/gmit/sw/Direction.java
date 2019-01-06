@@ -27,8 +27,9 @@ public enum Direction {
         this.orientation = orientation;
     }
     /**
-     * GetOrientation method returns the current instance of the orientation variable.
+     * 
      * @return
+     * GetOrientation method returns the current instance of the orientation variable.
      */
     public int getOrientation() {
         return this.orientation;

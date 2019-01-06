@@ -27,6 +27,7 @@ public class SpriteBuilder {
     /**
      * Sets the String name of the sprite 
      * @param name
+     * The name of the character sprite
      * @return
      * Returns the name
      */
@@ -37,6 +38,7 @@ public class SpriteBuilder {
     /**
      * Sets the pont in space of the sprite
      * @param p
+     * The instance of point class
      * @return
      * Returns the point
      */
@@ -47,6 +49,7 @@ public class SpriteBuilder {
     /**
      * Sets the image of the sprite
      * @param img
+     * The Buffered image SpriteBulider
      * @return
      * Returns the image
      */

@@ -22,7 +22,9 @@ public class Isometric extends LoadImages implements Isometricator{
 	}
 
 	/**
-	 * @param
+	 * @param x
+	 * The x,y parameters are used to map the 2D coordinate space to an isometric view on the X plain.
+	 * @param y
 	 * The x,y parameters are used to map the 2D coordinate space to an isometric view on the X plain.
 	 * @return
 	 * Returns the the converted X coordinate of the isometric position.
@@ -33,7 +35,9 @@ public class Isometric extends LoadImages implements Isometricator{
 	}
 
     /**
-     * @param
+     * @param x
+     * The x,y parameters are used to map the 2D coordinate space to an isometric view on the Y plain.
+     * @param y
      * The x,y parameters are used to map the 2D coordinate space to an isometric view on the Y plain.
      * @return
 	 * Returns the the converted Y coordinate of the isometric position.
@@ -43,7 +47,9 @@ public class Isometric extends LoadImages implements Isometricator{
 	}
 
     /**
-     * @param
+     * @param x
+     * A public Point method to take in 2D coordinates of the direction the character is facing.
+     * @param y
      * A public Point method to take in 2D coordinates of the direction the character is facing.
      * @return
      * Returns the direction the character is pointing in the converted isometric view.

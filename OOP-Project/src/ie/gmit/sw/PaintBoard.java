@@ -111,36 +111,40 @@ public class PaintBoard extends Isometric {
 		g2.drawImage(getPlayer().getImage(), point.getX(), point.getY(), null);
 	}
 	/**
-	 * Getters and setters for the class variables
+	 * 
 	 * @return
+	 * Getters and setters for the class variables
 	 */
 	public int[][] getMatrix() {
 		return matrix;
 	}
 	/**
-	 * Getters and setters for the class variables
-	 * @return
+	 *@param  matrix
+	 *Setter for matrix
 	 */
 	public void setMatrix(int[][] matrix) {
 		this.matrix = matrix;
 	}
 	/**
-	 * Getters and setters for the class variables
+	 * 
 	 * @return
+	 * Getters and setters for the class variables
 	 */
 	public int[][] getThings() {
 		return things;
 	}
 	/**
+	 * 
+	 * @param things
 	 * Getters and setters for the class variables
-	 * @return
 	 */
 	public void setThings(int[][] things) {
 		this.things = things;
 	}
 	/**
-	 * Getters and setters for the class variables
+	 *
 	 * @return
+	 *  Getters and setters for the class variables
 	 */
 	public BufferedImage[] getTiles() {
 		return tiles;
@@ -148,13 +152,15 @@ public class PaintBoard extends Isometric {
 	/**
 	 * 
 	 * @param tiles
+	 * Getters and setters for the class variables
 	 */
 	public void setTiles(BufferedImage[] tiles) {
 		this.tiles = tiles;
 	}
 	/**
-	 * Getters and setters for the class variables
+	 * 
 	 * @return
+	 * Getters and setters for the class variables
 	 */
 	public BufferedImage[] getObjects() {
 		return objects;
@@ -162,13 +168,15 @@ public class PaintBoard extends Isometric {
 	/**
 	 * 
 	 * @param objects
+	 * Getters and setters for the class variables
 	 */
 	public void setObjects(BufferedImage[] objects) {
 		this.objects = objects;
 	}
 	/**
-	 * Getters and setters for the class variables
+	 * 
 	 * @return
+	 * Getters and setters for the class variables
 	 */
 	public Sprite getPlayer() {
 		return player;
@@ -176,13 +184,15 @@ public class PaintBoard extends Isometric {
 	/**
 	 * 
 	 * @param player
+	 * Getters and setters for the class variables
 	 */
 	public void setPlayer(Sprite player) {
 		this.player = player;
 	}
 	/**
-	 * Getters and setters for the class variables
+	 * 
 	 * @return
+	 * Getters and setters for the class variables
 	 */
 	public boolean isIsometric() {
 		return isIsometric;
@@ -190,6 +200,7 @@ public class PaintBoard extends Isometric {
 	/**
 	 * 
 	 * @param isIsometric
+	 * Getters and setters for the class variables
 	 */
 	public void setIsometric(boolean isIsometric) {
 		this.isIsometric = isIsometric;
