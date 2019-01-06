@@ -7,7 +7,9 @@ import java.io.IOException;
 import javax.swing.Timer;
 
 /**
- * <h1>Game View</h1> This GameView class extends the Paintboard class
+ * <h1>Game View</h1> 
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
+ * This GameView class extends the Paintboard class
  * responsible for paintng the character, tiles and objects within the game
  * view. This class also extends the ActionListener and KeyListener interfaces
  * to handle user input key events used to move the player and toggle the

@@ -1,6 +1,7 @@
 package ie.gmit.sw;
 /**
- * <h1>Point</h1> 
+ * <h1>Point</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * THis class is a used to point the character in the direction (x , y coordinates).
  * @author Kevin Gleeson
  * @version 1.0

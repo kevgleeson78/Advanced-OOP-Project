@@ -1,6 +1,7 @@
 package ie.gmit.sw;
 /**
  * <h1>Isometric</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This class implements the Isometricator interface and extends the LoadImages class.
  * It is responsible for getting the isometric coordinates for the sprite character and creating a new point within the isometric space within the game view.
  * @author Kevin Gleeson

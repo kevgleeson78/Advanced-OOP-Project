@@ -4,6 +4,7 @@ import java.awt.*;
 
 /**
  * <h1>Game Window</h1> 
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This class is responsible for creating a singleton instance of the GAmeWindow class.
  * The two matrices of model and objects were abstracted out of this class to the Matrix class with anew instance of the Matrix class created within this class.
  * This allows for the encapsulation of the two matrices within this class.

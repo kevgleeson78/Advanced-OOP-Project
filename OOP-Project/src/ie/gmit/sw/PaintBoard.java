@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 /**
  * <h1>PaintBoard</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This class is responsible for painting the components of the board within the game view.
  * This class paints the sprites, tiles and object images and places them to there position within the Isometric view.
  * This class extends the Isometric class inheriting the conversion to isometric functionality.

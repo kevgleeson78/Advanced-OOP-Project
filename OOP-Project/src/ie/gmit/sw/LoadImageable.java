@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 /**
  * <h1>LoadImageable</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This Interface provides a bufferedImmage method to be used by implementing classes.
  * @author Kevin Gleeson
  * @version 1.0

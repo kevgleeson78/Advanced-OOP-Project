@@ -9,7 +9,9 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 /**
- * <h1>LoadImages</h1> The implementation of the LoadImagable interface.
+ * <h1>LoadImages</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499 
+ * The implementation of the LoadImagable interface.
  * 
  * @author Kevin Gleeson
  * @version 1.0

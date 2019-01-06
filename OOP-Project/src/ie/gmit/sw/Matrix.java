@@ -1,6 +1,7 @@
 package ie.gmit.sw;
 /**
  * <h1>Matrix</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This class has two matrices of model and objects.
  * The model matrix hold the tiles of the game view.
  * The objects matrix holds the game objects to be added to the game view.

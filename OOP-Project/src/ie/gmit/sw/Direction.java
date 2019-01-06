@@ -1,6 +1,7 @@
 package ie.gmit.sw;
 /**
 * <h1>Direction enum</h1>
+* Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
 * This enum set is used to map a numerical value to fours directions of the characters used in the game.
 * It is also used to get the orientation of the character.
 * @author  Kevin Gleeson

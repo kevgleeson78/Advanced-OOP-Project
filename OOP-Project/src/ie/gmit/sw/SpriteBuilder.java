@@ -8,6 +8,7 @@ package ie.gmit.sw;
 import java.awt.image.BufferedImage;
 /**
  * <h1>SpriteBuilder</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This a implementation of the builder design pattern and is used in the game view when building the player sprite.
  * This class promotes the reuse of this class for different implementations of the sprite class.
  * @author Kevin Gleeson

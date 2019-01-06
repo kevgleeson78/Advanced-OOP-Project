@@ -6,7 +6,9 @@
 package ie.gmit.sw;
 
 /**
- * <h1>Isometricator</h1> An interface to supply the methods getIsoX, getIsoY,
+ * <h1>Isometricator</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
+ * An interface to supply the methods getIsoX, getIsoY,
  * getIso to an implementing class.
  * 
  * @author Kevin Gleeson

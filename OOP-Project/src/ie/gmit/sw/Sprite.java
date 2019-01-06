@@ -13,7 +13,8 @@ package ie.gmit.sw;
 
 import java.awt.image.*;
 /**
- * <h1>Sprite</h1> 
+ * <h1>Sprite</h1>
+ * Adapted from https://learnonline.gmit.ie/mod/resource/view.php?id=127499
  * This class is responsible for holding the data for each sprite in the application.
  * With: the name of the sprite,
  * 		 the images for the sprite to be animated,
