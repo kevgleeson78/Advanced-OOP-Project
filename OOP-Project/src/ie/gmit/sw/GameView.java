@@ -68,7 +68,8 @@ public class GameView extends PaintBoard implements ActionListener, KeyListener 
 		 * Each new object can be named via a simple string declaration with the Point on the game board.
 		 */
 		setPlayer(new SpriteBuilder().setName("Player 1").setP(new Point(0, 0))
-				.setImg(loadImages("./resources/images/sprites/default", null)).createSprite());
+				.setImg(loadImages("./resources/images/sprites/person", null)).createSprite());
+		
 	}
 
 	/**
